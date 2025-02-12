@@ -18,7 +18,8 @@ const url =process.env.MONGODB_URL
 app.use(express.json());
 app.use(cors(
     {
-        origin:["http://localhost:5173", "https://e-commerce-food-lolj.onrender.com"], 
+        //origin:["http://localhost:5173", "https://e-commerce-food-lolj.onrender.com"], 
+        origin: "https://e-commerce-food-lolj.onrender.com", 
         credentials: true,
     }
 ))
