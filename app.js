@@ -16,13 +16,13 @@ const url =process.env.MONGODB_URL
 
 // Middleware to parse JSON
 app.use(express.json());
-app.use(cors(
-    {
-        //origin:["http://localhost:5173", "https://e-commerce-food-lolj.onrender.com"], 
-        origin: "https://e-commerce-food-lolj.onrender.com", 
-        credentials: true,
-    }
-))
+app.use(cors({
+    origin: ["http://localhost:5173", "https://e-commerce-food-lolj.onrender.com"],
+    credentials: true,
+    methods: ["GET", "POST", "PATCH", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+  }));
+  
 
 // Home route
 app.get('/', (req, res) => {
